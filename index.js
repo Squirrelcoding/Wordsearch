@@ -72,7 +72,11 @@ function getFiles(dir, files_){
           getFiles(name, files_);    //Append directory to list
           dirList.push(name)
       } else {
-          checkFile(name, list)     //Append file to file list to check later.
+          //Append file to file list to check later.
+          fs.readFile(name, 'utf8', function(err, data) {
+            var lowerCaseData = data.toLowerCase();
+            containsAny(lowerCaseData, list, filename)
+          })
           files_.push(name);
       }
   }
