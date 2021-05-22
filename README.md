@@ -31,3 +31,8 @@ A folder called `wordFinderLogs` will be created and will contain your results. 
 ---
 # Bugs
 This is guranteed to have a LOT of bugs, so please report them in the [issues section!](https://github.com/Squirrelcoding/Wordsearch/issues)
+
+---
+
+# Future plans
+- Make this into a CLI tool.
