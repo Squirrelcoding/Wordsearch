@@ -72,10 +72,10 @@ function getFiles(dir, files_){
           getFiles(name, files_);    //Append directory to list
           dirList.push(name)
       } else {
-          //Append file to file list to check later.
+          //Check file
           fs.readFile(name, 'utf8', function(err, data) {
             var lowerCaseData = data.toLowerCase();
-            containsAny(lowerCaseData, list, filename)
+            containsAny(lowerCaseData, list, name)
           })
           files_.push(name);
       }
@@ -83,13 +83,6 @@ function getFiles(dir, files_){
   return files_;
 }
 
-//Useless function but it's still there.
-function checkFile(filename, list) {
-  fs.readFile(filename, 'utf8', function(err, data) {
-    var lowerCaseData = data.toLowerCase();
-    containsAny(lowerCaseData, list, filename)
-  })
-}
 
 var list = json.keyWords;
 

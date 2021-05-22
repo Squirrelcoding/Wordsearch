@@ -1,5 +1,5 @@
 .vscode/
 node_modules/
-wordFinderLogs/
+wordsearchLogs/
 testDir/
 package-lock.json
