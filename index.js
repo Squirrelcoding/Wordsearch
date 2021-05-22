@@ -10,7 +10,7 @@ it, and if it does it dosen't log the results in that directory
 var dirList = [];
 
 if (!fs.existsSync('WordsearchLogs')){
-  fs.mkdir('WordsearchLogs');
+  fs.mkdirSync('WordsearchLogs');
 }
 
 
